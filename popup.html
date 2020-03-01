@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+    <style>
+        .pouup-wrapper {
+            background: rgba(0, 0, 0, .7);
+            position: fixed;
+            /* top: 0;
+            left: 0; */
+            width: 100%;
+            height: 100%;
+            display: none;
+            transition: all .5s ease-in;
+            margin: 0 auto;
+        }
+        
+        .popup {
+            max-width: 400px;
+            margin: 10% auto;
+            text-align: center;
+            background: #fff;
+            position: relative;
+            padding: 20px;
+            transition: all .5s ease-in;
+        }
+        
+        .pop-close {
+            text-align: right;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="title" style="color:orange;">JavaScript Popup</h1>
+
+    <button>Click Popup</button>
+
+    <div class="pouup-wrapper">
+
+        <div class="popup">
+            <div class="pouup-content">
+                <div class="pop-close">X</div>
+
+                <h2 class="copy-me">Pop up</h2>
+                <div class="box">move the mouse around the box</div>
+                <p>Lorem ipsum color sit amet consetetur</p>
+                <p>Lorem ipsum color sit amet consetetur</p>
+                <p>Lorem ipsum color sit amet consetetur</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
