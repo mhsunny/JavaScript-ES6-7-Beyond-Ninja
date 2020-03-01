@@ -5,6 +5,31 @@ Becoming a JavaScript ninja! In these examples, here you find some codes of the 
 
 Here you find the basics to get you up-and-running quickly, before diving in to some of the really fun stuff like web-page manipulation, creating interactive forms, popups & other cool effects. Along the way we'll be using the latest additions to the JavaScript specification (ES6, 7 & beyond) and maintaining good coding standards to keep our code clean and effective! 
 
+<<<<<<< HEAD
+=======
+<ul>
+<li>Modern JavaScript, from the very beginning to more advanced topics
+</li>
+
+<li>OOP (object-oriented programming) with JavaScript, working with prototypes & classes
+</li>
+
+<li>create real-world front-end applications with JavaScript (quizes, weather apps, chat rooms etc)
+</li>
+
+<li>make useful JavaScript driven UI components like popups, drop-downs, tabs, tool-tips & more.
+</li>
+
+<li>modern, cutting-edge JavaScript features today by using a modern workflow (Babel & Webpack)
+</li>
+
+<li>use real-time databases to store, retrieve and update application data
+</li>
+
+<li>Explore API's to make the most of third-party data (such as weather information) 
+</li>
+</ul>
+>>>>>>> e270b9d4d0164dc1cfdcf827d887e0215cfc7e4a
 
 <ul>
 <li>Modern JavaScript, from the very beginning to more advanced topics
