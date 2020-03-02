@@ -1,35 +1,276 @@
+//array methods
+//method chaining array
+//filter and return new array
+//map - return a new array to rearrange 
+//sort - return array. but not return new array - destruct the old array
+const products = [
+    {name: 'gold star', price: 20},
+    {name: 'mushroom', price: 40},
+    {name: 'green sheel', price: 120},
+    {name: 'banana green', price: 10},
+    {name: 'red carot', price: 50},
 
-//copy events
-const copy = document.querySelector('.copy-me');
-copy.addEventListener('copy', () =>{
-    console.log("my content copyright")
-})
-const box = document.querySelector('.box');
-box.addEventListener('mousemove', e =>{
-    //console.log(e);
-    //console.log(e.offsetX, e.offsetY);
-    box.textContent = `x pos ${e.offsetX} - y pos ${e.offsetY}`;
-    box.setAttribute('style', `left:${e.offsetX}px; top: ${e.offsetY}px`)
-} )
+] ;
+// const filterProducts = products.filter(product => product.price>20);
+
+// console.log(filterProducts);
+
+// const promos = filterProducts.map((product)=>{
+//     return `the ${product.name} is ${product.price/2} pounds`;
+// })
+
+const promos =  products
+    .filter(product => product.price>20)
+    .map(product=>{
+        return `the ${product.name} is ${product.price/2}` ;
+    })
+
+console.log(promos);
+
+
+
+
+
+
+
+//sort 
+
+// const players = [
+//     {name: 'sunny', score: 20},
+//     {name: 'kaniz', score: 10},
+//     {name: 'Yellin', score: 5},
+//     {name: 'Rony', score: 80},
+//     {name: 'Rejvi', score: 9},
+//     {name: 'Holei', score: 50},
+
+// ];
+  
  
-//click events
-const ul = document.querySelector('ul');
-// items.remove();
+//   players.sort((a, b) =>{
+//     return b.score-a.score;
+//     // if(a.score < b.score){
+//     //     return 1;
+//     // }else if(a.score > b.score){
+//     //     return -1;
+//     // }else{
+//     //     return 0;
+//     // }
 
-const button = document.querySelector('button');
-button.addEventListener('click', ()=>{
-    //console.log("you clicked me");
-    //ul.innerHTML += '<li>Somehing New</li>'
-    const li = document.createElement('li');
-    li.textContent = 'some new to do';
-    // ul.append(li);
-    ul.prepend(li);
-})
+  
+// })
+// console.log(players);
 
-document.addEventListener('scroll', e =>{
-    console.log(e );
-    console.log(e.pageX, e.pageY);
-})
+// const names = ['sunny', 'yellin', 'kamal', 'jamal'];
+//names.sort();
+// names.reverse();
+// console.log(names);
+
+// const scores = [10, 20, 50, 60, 5, 70, 90, 30];
+//  scores.sort();
+// // scores.reverse();
+//  console.log(scores);
+
+// const sortScores = scores.sort((a, b) =>{
+//     return a-b;
+// })
+
+// console.log(scores);
+
+ 
+
+
+
+
+//find - 
+
+// const scores = [10, 20, 50, 60, 70, 90, 30];
+
+// //remove over 50 all 
+// const lessScore = [];
+// const firstHighScors = scores.find((score)=>{
+//     if(score < 50){
+//         lessScore.push(score);
+//     }
+//     return score > 50; // return 60 as we find the over 50 and it stops
+// });
+
+// console.log(firstHighScors);
+
+// console.log(lessScore);
+
+
+
+//reduce 
+
+// const scores = [
+//     {name: 'sunny', score: 20},
+//     {name: 'kalamal', score: 30},
+//     {name: 'sunny', score: 80},
+//     {name: 'rony', score: 40},
+//     {name: 'sibli', score: 60},
+//     {name: 'sunny', score: 20},
+//     {name: 'kalamal', score: 30},
+//     {name: 'sunny', score: 80},
+//     {name: 'rony', score: 40},
+//     {name: 'sibli', score: 60},
+//     {name: 'sunny', score: 20},
+//     {name: 'kalamal', score: 30},
+//     {name: 'sunny', score: 80},
+//     {name: 'rony', score: 40},
+//     {name: 'sibli', score: 60},
+
+// ];
+
+// const sunnyTotal = scores.reduce((acc, curr)=>{
+
+//     if(curr.name === 'sunny'){
+//         acc += curr.score;
+//     }
+//     return acc; 
+// }, 0);
+
+// console.log(sunnyTotal);
+
+//const scores = [10, 20, 50, 60, 70, 90, 30];
+
+// const result = scores.reduce((acc, curr) =>{
+//     if(curr > 50){
+//         acc++;
+//     }
+//     return acc;
+// }, 0 ) ; 
+
+// console.log(result);
+
+//map
+
+// const products = [
+//     {name: 'gold star', price: 20},
+//     {name: 'mushroom', price: 40},
+//     {name: 'green sheel', price: 120},
+//     {name: 'banana green', price: 10},
+//     {name: 'red carot', price: 50},
+
+// ] ;
+// const discountPrice = [
+//     {name:'Pepsi', price:4}
+// ];
+
+// const saleProducts = products.map(product =>{
+ 
+//     discountPrice.push({name: product.name, price:product.price})
+
+//     if(product.price > 30){   
+//         return {name: product.name, price:product.price/2}
+//     }else{
+//         return product;
+//     } 
+  
+// }) 
+// console.log(discountPrice);
+
+ 
+
+
+// const prices = [10, 30, 15, 40, 5, 70, 9, 10, 15, 30];
+
+// const salePrices = prices.map((price, index)=>{
+//         //return  price / 2;
+
+//         //  console.log(prices.indexOf(price));
+//          //return prices.indexOf(price) != index
+//          console.log(prices.indexOf(price), index);
+
+//     })
+
+ 
+//     console.log(salePrices);
+ 
+
+// const users = [
+   
+//     {name: 'sunny', premium:true},
+//     {name: 'kalam', premium:false},
+//     {name: 'jhon', premium:false},
+//     {name: 'Raja', premium:true},
+
+// ];
+
+//filter
+
+// const filterUsers = users.filter((user, index)=>{
+//         return  !user.premium  ;
+//     })
+
+// console.log(filterUsers);
+
+
+// const score = [10, 30, 15, 40, 5, 70, 9, 10, 15, 30];
+
+// const filterScore = score.filter((item)=>{
+//     return item > 20;
+// })
+
+// console.log(filterScore);
+
+
+
+//remove duplicate 
+// const score = [10, 30, 15, 40, 5, 70, 9, 10, 15, 30];
+// const uniqueScore = [];
+// const duplicateScore = [];
+
+// score.forEach((number, index) =>{
+//     if(!uniqueScore.includes(number)){
+//         uniqueScore.push(number)
+//     }else{
+//         duplicateScore.push(number);
+//     } 
+
+// } )
+
+
+// const sortScore = uniqueScore.sort((a,b)=>{
+//     return b-a;
+// });
+
+
+// console.log(sortScore)
+
+// console.log(uniqueScore)
+// console.log(duplicateScore)
+
+// //copy events
+// const copy = document.querySelector('.copy-me');
+// copy.addEventListener('copy', () =>{
+//     console.log("my content copyright")
+// })
+// const box = document.querySelector('.box');
+// box.addEventListener('mousemove', e =>{
+//     //console.log(e);
+//     //console.log(e.offsetX, e.offsetY);
+//     box.textContent = `x pos ${e.offsetX} - y pos ${e.offsetY}`;
+//     box.setAttribute('style', `left:${e.offsetX}px; top: ${e.offsetY}px`)
+// } )
+ 
+// //click events
+// const ul = document.querySelector('ul');
+// // items.remove();
+
+// const button = document.querySelector('button');
+// button.addEventListener('click', ()=>{
+//     //console.log("you clicked me");
+//     //ul.innerHTML += '<li>Somehing New</li>'
+//     const li = document.createElement('li');
+//     li.textContent = 'some new to do';
+//     // ul.append(li);
+//     ul.prepend(li);
+// })
+
+// document.addEventListener('scroll', e =>{
+//     console.log(e );
+//     console.log(e.pageX, e.pageY);
+// })
 
 
 
@@ -48,12 +289,12 @@ document.addEventListener('scroll', e =>{
 // });
 // console.log(items);
 
-ul.addEventListener('click', e =>{
-    console.log( e);
-    if(e.target.tagName === 'LI'){
-        e.target.remove();
-    }
-})
+// ul.addEventListener('click', e =>{
+//     console.log( e);
+//     if(e.target.tagName === 'LI'){
+//         e.target.remove();
+//     }
+// })
 
 
 //const article = document.querySelector("article");
